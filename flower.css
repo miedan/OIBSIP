@@ -1,0 +1,240 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.brandbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    height: 80px;
+    
+}
+
+.brandbar h1{
+   
+    color: brown;
+    font-weight: bolder;
+    padding-left: 30px;
+    padding-top: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+input[type="search"] {
+
+    border: 1px solid black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 30px;
+    width: 225px;
+    border-radius: 10px; 
+    padding-left: 10px; 
+ 
+}
+
+.signin{
+    
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(218, 218, 218);
+    background-color: brown;
+    color: white;
+}
+
+.header{
+    display: flex;
+    background-color: rgb(245, 239, 239);
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: brown;
+    color: white;
+}
+
+ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 40px;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+
+.action{
+    display: flex;
+    gap: 20px;
+    padding-right: 25px;
+    align-items: center;   
+}
+
+
+
+.container{
+    display: flex;
+    border: 1px;
+    
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 10px;
+    padding-top: 0px;
+
+}
+
+
+
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.promocontainer{
+    position: relative;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+      
+}
+
+.explore{ 
+
+   font-size: 25px;
+   color: white;
+   margin: 30px;
+   margin-left: 60px;
+   height: 40px;
+   width: 160px;
+   background-color:brown;
+   font-weight: 100px;
+   
+}
+
+
+
+
+.topleft{ 
+    position: absolute;
+    right: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
+
+.promo {
+
+        width: auto;      
+        height: 550px;     
+        margin: 0;
+        margin-left: 25px;
+        margin-right: 25px;
+        object-fit: cover;
+        
+    
+    
+}
+
+.slogan{
+    color: brown;
+}
+
+
+@media (max-width: 620px){
+
+ 
+
+    .signin{
+        width: 50px;
+        font-size: small;
+        height: 25px;
+        border-radius: 5px;
+        
+    }
+
+
+    input[type="search"] {
+
+        border: 1px solid black;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 100px;   
+        height: 25px;
+        border-radius: 5px; 
+        padding-left: 5px; 
+       
+    }
+
+
+       
+    .action{
+        
+        gap: 10px;
+        padding-right: 5px;
+        
+        
+    }
+
+    ul li{
+        
+        margin-right: 18px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+
+
+    
+
+    .container{
+        display: flex;
+        gap: 1px;
+        align-items: center;
+        position: relative;
+        padding-bottom: 5px;
+        padding-top: 0px;
+    
+    }
+
+   
+
+    .brandbar h1{
+   
+        font-size: large;
+        padding: 0px;
+        padding-left: 5px;
+       
+ 
+    }
+
+    .topleft { 
+       
+        left: 4px;
+        gap: 5px;   
+    }
+    
+   
+
+    .promo {
+
+
+        content: url('https://img.freepik.com/free-photo/beautiful-frame-made-with-petals-flowers-plants-white-background_24972-193.jpg?size=626&ext=jpg&ga=GA1.2.132353127.1693577180&semt=sph');
+
+        width: auto;      
+        height: 550px;     
+        margin: 0;
+        object-fit:fill;
+}
+  
+}
+
