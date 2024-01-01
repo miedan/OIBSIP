@@ -32,6 +32,12 @@ const Projects = () => {
         title: "Melodify",
         description: "this is a music stream website",
         url:musicweb},
+
+        
+        {id:"4",
+        title: "Melodify",
+        description: "this is a music stream website",
+        url:musicweb},
        
     ]
 
