@@ -1,0 +1,65 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: rgb(199, 199, 241);
+}
+
+.header{
+    display: flex;
+    padding: 20px;
+  
+}
+
+
+.converter{
+    display: flex;
+    justify-content: space-evenly;
+   
+    gap:10px ;
+}
+
+.convert{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    
+}
+
+.toconvert{
+    display: flex;
+    
+    align-items: center;
+    gap: 2px;
+}
+
+.convert-btn{
+    background-color: white;
+    height: 30px;
+    width: 160px;
+    margin: 20px;
+    /* margin: 90px; */
+    margin-left: 50px;
+}
+
+#input-temperature{
+    background-color: white;
+    border-color: rgb(173, 173, 173);
+    height: 30px;
+    padding-left: 2px;
+    margin-top: 5px;
+  
+}
+
+.unit-selection{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.c{
+    display: flex;
+    gap: 4px;
+}

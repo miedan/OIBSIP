@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="coverter.css">
+</head>
+
+<body>
+
+    <section>
+        <header class="header">
+           
+            <h2>Welcome Anita </h2>
+
+        </header>
+
+        <main class="converter">
+
+            <img class="logo" src="C:\Users\Miedan\temperature converter\tempapplogo.png" alt="logo">
+
+
+            <div class="convert">
+              
+                <h1 style="padding-bottom: 40px; font-size:xx-large ;">Temperature Converter</h1>
+
+                <div class="to-convert">
+                   
+                    <h3 >Enter temperature To Convert :</h3>
+                    
+                </div >
+
+                <input type="text" placeholder="Enter temperature" id="input-temperature" >
+                 
+
+                <div class="unit-selection">
+
+                        <div class="c">
+                            <p>From: </p>
+                            <select id="from-unit-selector">
+                                <option value="Kelvin">Kelvin</option>
+                                <option  value="farhenit">Farhenit</option>
+                                <option  value="celcius">Celcius</option>
+                            </select>
+                        </div>
+                        
+
+                    <div class="c"> 
+                        <p>To: </p>
+                        <select id="to-unit-selector">
+                            <option value="Kelvin">Kelvin</option>
+                            <option  value="farhenit">Farhenit</option>
+                            <option  value="celcius">Celcius</option>
+                        </select>
+                    </div>
+                           
+                   
+                </div>
+                
+                <div id="errorMessage" style="color: red;"></div>
+               
+                <h2 id="result"></h2>
+                
+
+                <button class="convert-btn" onclick="temperatureconverter() " >convert</button>
+                
+            </div>
+        </main>
+
+        
+    </section>
+
+   
+<script src="converter.js"></script>
+</body>
+</html>
