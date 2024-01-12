@@ -51,10 +51,10 @@ const Projects = () => {
 
   
   return (
-        <article className='py-20'>
+        <article className='py-20' id = "project">
 
         <h1 className='flex justify-center gap-3 text-2xl   shadow-2xl' >My <span  className='text-amber-400 '> Projects</span></h1>
-        <div  className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-14 ">
+        <div  className="grid grid-cols-1 md:grid-cols-3 gap-8 p-14 ">
         {myprojects.map(({ id,title, description, url }, index) => (
                         <div key={id} 
                        

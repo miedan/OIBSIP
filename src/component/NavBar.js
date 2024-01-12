@@ -1,77 +1,97 @@
-import { useState, useEffect } from "react";
-import { IoHomeOutline } from "react-icons/io5";
-import { CgProfile } from "react-icons/cg";
-import { PiLaptopThin } from "react-icons/pi";
-import { IoSchoolOutline } from "react-icons/io5";
+import React, { useState } from 'react';
+import { IoHomeOutline } from 'react-icons/io5';
+import { CgProfile } from 'react-icons/cg';
+import { PiLaptopThin } from 'react-icons/pi';
+import { IoSchoolOutline } from 'react-icons/io5';
+import { MdOutlineContactPhone } from 'react-icons/md';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 function Navbar() {
-
-  const [activelink, setactivelink] = useState('HOME')
+  const [activelink, setactivelink] = useState('home');
+  const [showDropdown, setShowDropdown] = useState(false);
 
   const handleLinkClick = (link) => {
-    setactivelink(link)
-  }
+    setactivelink(link);
+    setShowDropdown(false);
+  };
+
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
 
   const Link = ({ text, id }) => (
-    <li>
-      <a 
-        href={`#${text}`}
-        className={` hover:text-amber-400 ${
-          activelink === id ? "text-amber-400" : ""
-        }`}
-        onClick={() => handleLinkClick(id)}
-      >
-        {text}
-      </a>
+    <li
+      className={`hover:text-amber-400 ${activelink === id ? 'text-amber-400' : ''}`}
+      onClick={() => handleLinkClick(id)}
+    >
+      <AnchorLink href={`#${id}`}>{text}</AnchorLink>
     </li>
   );
 
- 
-    return (
-      <nav className="bg-zinc-900 text-white">
+  return (
+    <nav className="bg-zinc-900 text-white">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <h1 className="text-xl font-bold">Miedan</h1>
-        {/* <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center  text-gray-400 -lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-          <span className="sr-only">Open main menu</span>
-          SVG remains the same
-          <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
-          </svg>
-        </button> */}
-        <div className="hidden md:flex  md:w-auto" id="navbar-default">
-          <ul className="font-medium flex flex-col gap-7 text-md  md:p-0 mt-4  text-white bg-zinc-900 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 ">
-            <div className="flex items-center gap-2">
-              <IoHomeOutline/>
-            <Link text="HOME" id="HOME" />
+
+        <div className="md:hidden">
+          <button
+            onClick={toggleDropdown}
+            className="text-gray-400 hover:text-white focus:outline-none"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+
+          {showDropdown && (
+            <div className="mt-2 space-y-2">
+              <Link text="HOME" id="home" />
+              <Link text="ABOUT ME" id="aboutme" />
+              <Link text="SKILLS" id="skills" />
+              <Link text="PROJECTS" id="project" />
+              <Link text="CONTACT" id="contact" />
+              {/* Add more links as needed */}
             </div>
-         
-          <div className="flex items-center gap-2">
-          <CgProfile  />
-          <Link text="ABOUT ME" id="ABOUT ME" />
-          </div>
-            
+          )}
+        </div>
+
+        <div className={`hidden md:flex md:w-auto ${showDropdown ? 'flex' : 'hidden'}`}>
+          <ul className="font-medium flex flex-col gap-7 text-sm md:p-0 mt-4 text-white bg-zinc-900 md:flex-row md:space-x-1 md:mt-0">
             <div className="flex items-center gap-2">
-              <IoSchoolOutline/>
-              <Link text="SKILLS" id="SKILLS" />
+              <IoHomeOutline />
+              <Link text="HOME" id="home" />
             </div>
-            
+
             <div className="flex items-center gap-2">
-              <PiLaptopThin/>
-            <Link text="PROJECTS" id="PROJECTS" />
+              <CgProfile />
+              <Link text="ABOUT ME" id="aboutme" />
             </div>
-            
-            <li>
-              <button href="#CONTACT" className={`py-2 px-3 rounded-lg border w-24 flex justify-center items-center   hover:text-amber-400 md:p-0 ${
-                  activelink === "CONTACT" ? "font-bold  bg-amber-400"  : " "
-                }`} 
-                onClick={() => handleLinkClick("CONTACT")}> CONTACT</button>
-            </li>
+
+            <div className="flex items-center gap-2">
+              <IoSchoolOutline />
+              <Link text="SKILLS" id="skills" />
+            </div>
+
+            <div className="flex items-center gap-2">
+              <PiLaptopThin />
+              <Link text="PROJECTS" id="project" />
+            </div>
+
+            <div className="flex items-center gap-2">
+              <MdOutlineContactPhone />
+              <Link text="CONTACT" id="contact" />
+            </div>
           </ul>
         </div>
       </div>
     </nav>
-        )
-  }
-  
-  export default Navbar;
-  
+  );
+}
+
+export default Navbar;

@@ -11,7 +11,7 @@ const Skills = () => {
     const uiskills = ["UI Design"]
   return (
 
-    <section className=' px-1 md:px-14'>
+    <section className=' px-1 md:px-14' id = "skills">
         <h1 className='pb-14 gap md:text-2xl font-bold flex justify-center'>SKILLS</h1>
         <div className='flex justify-around'>
 

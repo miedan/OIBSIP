@@ -33,7 +33,7 @@ const Main = () => {
 
   return (
 
-    <section>
+    <section id = "home">
     
     <div className="flex flex-col  px-20  md:flex-row md:gap-4 my-14 pt-12 w-full  ">
       <div >
